@@ -12,9 +12,9 @@ A estrutura da tabela users possui os seguintnes atrinutos:
   * created_at: Data que o usuario foi registrado
 
 Para inicializar o projeto
-  => Clone o repositório: git clone https://github.com/kadioba/cashlizer-api.git
-  => Instale as dependências: npm i
-  => Crie o banco de dados e adicione o acesso ao arquivo .env
+  * Clone o repositório: git clone https://github.com/kadioba/cashlizer-api.gi
+  * Instale as dependências: npm i
+  * Crie o banco de dados e adicione o acesso ao arquivo .env
 
 Testando as funcionalidades da API
 A API possui as seguintes rotas:
