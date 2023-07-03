@@ -19,11 +19,11 @@ Para inicializar o projeto
 Testando as funcionalidades da API
 A API possui as seguintes rotas:
 
-GET /users: Retorna uma lista de usuários.
-GET /users/id: Retorna um usuário com base no ID.
-POST /users: Cria um novo usuário.
-DELETE /users/id: Remove um usuário com base no ID.
-PUT /users/id: Atualiza as informações de um usuário.
+* GET /users: Retorna uma lista de usuários.
+* GET /users/id: Retorna um usuário com base no ID.
+* POST /users: Cria um novo usuário.
+* DELETE /users/id: Remove um usuário com base no ID.
+* PUT /users/id: Atualiza as informações de um usuário.
 Para testar estas rotas, você pode usar ferramentas como Postman ou curl.
 
 Arquitetura e Documentação do Projeto
