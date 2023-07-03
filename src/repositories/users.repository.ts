@@ -1,8 +1,16 @@
 import db from "@/database/databse.connection";
 import { User, UserInput } from "@/protocols";
 
-async function getUsers() {
-    const users = await db.query<User>('SELECT * FROM users');
+async function getUsers(limit: number) {
+    let queryParams: number[] = [];
+    let query: string = `SELECT * FROM users`;
+
+    if (limit) {
+        queryParams.push(limit);
+        query += ` LIMIT $${queryParams.length}`;
+    }
+
+    const users = await db.query<User>(query, queryParams);
     return users.rows;
 }
 

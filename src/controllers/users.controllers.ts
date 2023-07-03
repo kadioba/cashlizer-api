@@ -3,7 +3,8 @@ import usersService from "@/services/users.services";
 import { Request, Response } from "express";
 
 async function getUsers(req: Request, res: Response) {
-    const users: User[] = await usersService.getUsers();
+    const limit: number = Number(req.query.limit);
+    const users: User[] = await usersService.getUsers(limit);
     res.status(200).send(users);
 }
 

@@ -2,8 +2,8 @@ import { User, UserInput } from "@/protocols";
 import usersRepository from "@/repositories/users.repository";
 
 
-async function getUsers() {
-    const users: User[] = await usersRepository.getUsers();
+async function getUsers(limit: number) {
+    const users: User[] = await usersRepository.getUsers(limit);
     return users;
 }
 
