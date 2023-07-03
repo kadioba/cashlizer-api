@@ -20,11 +20,16 @@ async function deleteUser(id: number) {
     await usersRepository.deleteUser(id);
 }
 
+async function updateUser(id: number, user: UserInput) {
+    await usersRepository.updateUser(id, user);
+}
+
 const usersService = {
     getUsers,
     getUserById,
     createUser,
-    deleteUser
+    deleteUser,
+    updateUser
 }
 
 export default usersService;

@@ -25,12 +25,19 @@ async function deleteUser(req: Request, res: Response) {
     res.sendStatus(200);
 }
 
+async function updateUser(req: Request, res: Response) {
+    const id: number = Number(req.params.id);
+    const user: UserInput = req.body;
+    await usersService.updateUser(id, user);
+    res.sendStatus(200);
+}
 
 const usersController = {
     getUsers,
     getUserById,
     createUser,
-    deleteUser
+    deleteUser,
+    updateUser
 }
 
 export default usersController;

@@ -20,11 +20,17 @@ async function deleteUser(id: number) {
     await db.query('DELETE FROM users WHERE id = $1', [id]);
 }
 
+async function updateUser(id: number, user: UserInput) {
+    await db.query<UserInput>('UPDATE users SET name = $1, cpf = $2, email = $3, cellphone = $4 WHERE id = $5',
+        [user.name, user.cpf, user.email, user.cellphone, id]);
+}
+
 const usersRepository = {
     getUsers,
     getUserById,
     createUser,
-    deleteUser
+    deleteUser,
+    updateUser
 }
 
 export default usersRepository;
